@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="./images/logo.webp" width="400" alt="" />
+          <img src="./images/logo.webp" class="logo" alt="" />
         </a>
         <button
           class="navbar-toggler"
@@ -68,8 +68,8 @@
       class="text-center py-2 d-flex gap-2 justify-content-center"
       style="background-color: #d6cffe"
     >
-      <p class="fw-500 mb-0">HOURS OF OPERATION</p>
-      <p class="mb-0">Monday - Friday: 9AM - 5PM EST</p>
+      <p class="fw-500 mb-0 text-small">HOURS OF OPERATION</p>
+      <p class="mb-0 text-small">Monday - Friday: 9AM - 5PM EST</p>
     </div>
     <!-- -------------------------- -->
     <div class="hero-section d-flex align-items-center">
@@ -118,29 +118,29 @@
       <p class="text-purple2 fw-500 fs-5">
         been featured on notable news outlets
       </p>
-      <div class="row gap-5 justify-content-center mt-4">
-        <div class="col-md-1">
-          <img src="./images/fox-business.webp" class="w-100" alt="" />
+      <div class="d-flex flex-wrap gap-4 justify-content-center mt-4">
+        <div class="">
+          <img src="./images/fox-business.webp" class="company-logos" alt="" />
         </div>
-        <div class="col-md-1">
-          <img src="./images/cnbc.webp" class="w-100" alt="" />
+        <div class="">
+          <img src="./images/cnbc.webp" class="company-logos" alt="" />
         </div>
-        <div class="col-md-1">
-          <img src="./images/fox-news.webp" class="w-100" alt="" />
+        <div class="">
+          <img src="./images/fox-news.webp" class="company-logos" alt="" />
         </div>
-        <div class="col-md-1">
-          <img src="./images/cnn.webp" class="w-100" alt="" />
+        <div class="">
+          <img src="./images/cnn.webp" class="company-logos" alt="" />
         </div>
-        <div class="col-md-3">
-          <img src="./images/msnbc.webp" class="w-100" alt="" />
+        <div class="">
+          <img src="./images/msnbc.webp" class="company-logos" alt="" />
         </div>
       </div>
     </div>
     <!-- -------------------------- -->
-    <div class="bg-purple2 px-5 py-5">
+    <div class="bg-purple2 howItWork">
       <h2 class="text-white text-center py-5 display-5">How It Works</h2>
       <div class="row h-100 mb-3">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
           <div class="bg-white h-100 rounded-1 py-5 px-5">
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center gap-2">
@@ -155,7 +155,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
           <div class="bg-white h-100 rounded-1 py-5 px-5">
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center gap-2">
@@ -173,7 +173,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
           <div class="bg-white h-100 rounded-1 py-5 px-5">
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex align-items-center gap-2">
@@ -352,7 +352,7 @@
       </div>
 
       <!-- part A -->
-      <div class="partA bg-light rounded-1 p-5 part-content active">
+      <div class="partA bg-light rounded-1 part-content active">
         <div class="row">
           <div class="col-md-6">
             <h2 class="text-purple2 fw-300">Medicare Part A</h2>
@@ -379,7 +379,7 @@
         </div>
       </div>
       <!-- part B -->
-      <div class="partB bg-light rounded-1 p-5 part-content">
+      <div class="partB bg-light rounded-1 part-content">
         <div class="row">
           <div class="col-md-6">
             <h2 class="text-purple2 fw-300">Medicare Part B</h2>
@@ -407,7 +407,7 @@
         </div>
       </div>
       <!-- part C -->
-      <div class="partC bg-light rounded-1 p-5 part-content">
+      <div class="partC bg-light rounded-1 part-content">
         <div class="row">
           <div class="col-md-6">
             <h2 class="text-purple2 fw-300">Medicare Part C</h2>
@@ -439,7 +439,7 @@
         </div>
       </div>
       <!-- part D -->
-      <div class="partD bg-light rounded-1 p-5 part-content">
+      <div class="partD bg-light rounded-1 part-content">
         <div class="row">
           <div class="col-md-6">
             <h2 class="text-purple2 fw-300">Medicare Part D</h2>
@@ -476,20 +476,20 @@
       </div>
     </div>
     <!-- ------------- -->
-    <div class="bg-purple2 d-flex justify-content-center gap-2 py-5">
-      <img src="./images/people-group.webp" width="100" alt="" />
+    <div class="bg-purple2 d-flex justify-content-center gap-2 peoplebanner">
+      <img src="./images/people-group.webp" class="peopleIcon" alt="" />
       <div class="text-light d-flex align-items-center gap-1">
-        <h2 class="fs-4 fw-300">Over</h2>
-        <h1>30 million</h1>
-        <h2 class="fs-4 fw-300">people have a Medicare Advantage Plan.*</h2>
+        <h2 class="fw-300 peopleHeading">Over</h2>
+        <h1 class=" peopleHeading">30 million</h1>
+        <h2 class="fw-300 peopleHeading">people have a Medicare Advantage Plan.*</h2>
       </div>
     </div>
     <!--  -->
     <div class="bg-final">
-      <h1 class="text-light text-center">
+      <h1 class="text-light text-center ">
         Want to find out if a Medicare Advantage Plan
       </h1>
-      <h1 class="text-light text-center">
+      <h1 class="text-light text-center ">
         could save you money or include additional benefits?
       </h1>
       <p class="lead text-light">
