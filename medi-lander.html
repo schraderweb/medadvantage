@@ -21,6 +21,14 @@
     window._rgba_tags.push({affS1="zip_code"});
     window._rgba_tags.push({click_id="affS1"});
 </script>
+        <script>
+  window._rgba_tags = window._rgba_tags || [];
+  const params = new URLSearchParams(window.location.search);
+  const advS1 = params.get("advS1");
+  const zip = params.get("zip");
+  if (advS1) window._rgba_tags.push({ advS1 });
+  if (zip_code) window._rgba_tags.push({zip_code});
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedAdvantage Insurance - Medicare Insurance Plans</title>
