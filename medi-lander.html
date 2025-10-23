@@ -14,18 +14,18 @@
 </script>
 <!-- Trackdesk tracker with commission on click end -->
     <script src=//b-js.ringba.com/CAc4c97d9a7dcf46099e76209d7f95f1a9 async></script>
-<script type="text/javascript">
-  window._rgba_tags = (window._rgba_tags || []);
-    window._rgba_tags.push({zip_code});
-    window._rgba_tags.push({click_id});
-</script>
-        <script>
+<script>
+  // Initialize Ringba tags array
   window._rgba_tags = window._rgba_tags || [];
+
+  // Get URL parameters
   const params = new URLSearchParams(window.location.search);
-  const affS1 = params.get("zip_code");
-  const click_id = params.get("affS2");
-  if (affS1) window._rgba_tags.push({ zip_code });
-  if (click_id) window._rgba_tags.push({click_id});
+  const zip_code = params.get("zip_code");
+  const click_id = params.get("affS2"); // or change to "advS1" if that’s your parameter name
+
+  // Push the parameters into Ringba as tags if they exist
+  if (zip_code) window._rgba_tags.push({ zip_code: zip_code });
+  if (click_id) window._rgba_tags.push({ click_id: click_id });
 </script>
     <head>
     <meta charset="UTF-8">
