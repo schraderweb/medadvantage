@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedAdvantage Insurance | Navigate Medicare Advantage Plans</title>
+<style>
+  :root{
+    --navy:#1b2a4e;
+    --red:#c0392b;
+    --red-dark:#a5311f;
+    --text-dark:#1a1a1a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text-dark);
+    background:#fff;
+  }
+  .wrap{max-width:960px;margin:0 auto;}
+
+  /* Header */
+  header{
+    padding:20px 24px 10px;
+    text-align:center;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .logo svg{width:28px;height:28px;flex-shrink:0;}
+  .logo-text{
+    text-align:left;
+    line-height:1.05;
+  }
+  .logo-text .brand{
+    font-size:20px;
+    font-weight:800;
+    color:#1a1a1a;
+  }
+  .logo-text .tagline{
+    font-size:10px;
+    color:#2e7d32;
+    font-weight:600;
+    letter-spacing:.3px;
+  }
+  header .fine-print{
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  header h1{
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  header .sub{
+    font-size:14px;
+    font-weight:600;
+  }
+
+  /* Avatar */
+  .avatar-row{
+    display:flex;
+    justify-content:center;
+    padding:16px 0 0;
+    background:var(--navy);
+  }
+  .avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#cfd6e4;
+    border:4px solid #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    margin-top:16px;
+  }
+  .avatar svg{width:60%;height:60%;color:#7c8aa5;}
+
+  /* Hero / navy section */
+  .hero{
+    background:var(--navy);
+    color:#fff;
+    padding:24px 24px 40px;
+    text-align:center;
+  }
+  .hero p{
+    max-width:720px;
+    margin:0 auto 20px;
+    font-size:17px;
+    line-height:1.6;
+    font-weight:600;
+  }
+  .hero p.carriers{
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:26px;
+  }
+  .cta-btn{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    text-decoration:none;
+    font-weight:800;
+    font-size:20px;
+    padding:14px 34px;
+    border-radius:6px;
+    line-height:1.3;
+    transition:background .15s ease;
+  }
+  .cta-btn:hover{background:var(--red-dark);}
+  .cta-btn small{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    margin-top:2px;
+  }
+
+  /* How it works */
+  .how{
+    padding:40px 24px 30px;
+    text-align:center;
+  }
+  .how h2{
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:30px;
+  }
+  .steps{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:36px;
+  }
+  .step{
+    max-width:220px;
+  }
+  .step svg{
+    width:48px;
+    height:48px;
+    color:var(--navy);
+    margin-bottom:14px;
+  }
+  .step p{
+    font-size:14px;
+    font-weight:600;
+    line-height:1.5;
+  }
+
+  footer{
+    text-align:center;
+    padding:20px 24px 30px;
+    font-size:10px;
+    color:#555;
+  }
+
+  @media (max-width:600px){
+    .hero p{font-size:15px;}
+    .cta-btn{font-size:17px;padding:12px 24px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="9" y="2" width="6" height="20" rx="1.5" fill="#1b2a4e"/>
+        <rect x="2" y="9" width="20" height="6" rx="1.5" fill="#1b2a4e"/>
+      </svg>
+      <div class="logo-text">
+        <div class="brand">MedAdvantage Insurance</div>
+        <div class="tagline">Non-Government Entity</div>
+      </div>
+    </div>
+    <div class="fine-print">*Non-Government Entity</div>
+    <h1>Navigate Medicare Advantage Plans with Guidance</h1>
+    <div class="sub">{Have you lost coverage, moved, or turned 65?}</div>
+  </header>
+
+  <div class="avatar-row">
+    <div class="avatar">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.5c-3.3 0-9.9 1.6-9.9 4.9V22h19.8v-2.6c0-3.3-6.6-4.9-9.9-4.9z"/></svg>
+    </div>
+  </div>
+
+  <section class="hero">
+    <p>
+      If you have a chronic condition such as diabetes, heart failure, or cardiovascular
+      disorders, you may qualify for a Chronic Condition Special Needs Plan (C-SNP) Medicare
+      Advantage Plan with a [Healthy Food Allowance].
+    </p>
+    <p class="carriers">
+      Plans are offered by [UnitedHealthcare&reg;,][carrier 2,][carrier 3][and carrier 4]
+    </p>
+    <a class="cta-btn" href="tel:+18774470739">
+      877-447-0739
+      <small>TTY: 711</small>
+    </a>
+  </section>
+
+  <section class="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="6" y="2" width="12" height="20" rx="2"/>
+          <circle cx="9" cy="6" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="6" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="15" cy="6" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="9" cy="9" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="9" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="15" cy="9" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="9" cy="12" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="12" cy="12" r="0.6" fill="currentColor" stroke="none"/>
+          <circle cx="15" cy="12" r="0.6" fill="currentColor" stroke="none"/>
+          <rect x="9" y="16" width="6" height="2" rx="1" fill="currentColor" stroke="none"/>
+        </svg>
+        <p>Click the Button Above to Get Connected with a Licensed Insurance Agent.</p>
+      </div>
+      <div class="step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M4 5c0 8 7 15 15 15l2-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z"/>
+        </svg>
+        <p>Discuss Plan Options Easily Over the Phone.</p>
+      </div>
+      <div class="step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <circle cx="8" cy="9" r="3.5"/>
+          <path d="M8 7.5v3M6.7 8h2.6"/>
+          <path d="M3 18c2-3 6-3 8 0M13 18c2-3 6-3 8 0" stroke-linecap="round"/>
+          <circle cx="17" cy="9" r="3.5"/>
+        </svg>
+        <p>Compare and Shop Plans! [M-F] [9:00am &ndash; 7:00pm EST]</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    MULTI-PLAN_[YOUR_APPROVED_SMID]_M
+  </footer>
+</div>
+
+</body>
+</html>
