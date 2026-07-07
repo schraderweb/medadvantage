@@ -6,10 +6,11 @@
 <title>MedAdvantage Insurance | Navigate Medicare Advantage Plans</title>
 <style>
   :root{
-    --navy:#1b2a4e;
-    --red:#c0392b;
-    --red-dark:#a5311f;
-    --text-dark:#1a1a1a;
+    --teal:#0d4f4a;
+    --teal-light:#e7f3f1;
+    --orange:#e0762c;
+    --orange-dark:#c25f1c;
+    --text-dark:#20241f;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
@@ -17,104 +18,108 @@
     color:var(--text-dark);
     background:#fff;
   }
-  .wrap{max-width:960px;margin:0 auto;}
+  .wrap{max-width:1000px;margin:0 auto;}
 
   /* Header */
   header{
-    padding:20px 24px 10px;
-    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    padding:18px 24px;
+    border-bottom:3px solid var(--teal);
   }
   .logo{
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:14px;
+    gap:10px;
   }
-  .logo svg{width:28px;height:28px;flex-shrink:0;}
-  .logo-text{
-    text-align:left;
-    line-height:1.05;
+  .logo svg{width:30px;height:30px;flex-shrink:0;color:var(--teal);}
+  .logo-text{line-height:1.05;text-align:left;}
+  .logo-text .brand{font-size:19px;font-weight:800;color:var(--teal);}
+  .logo-text .tagline{font-size:10px;color:var(--orange);font-weight:700;letter-spacing:.3px;}
+  header .fine-print{font-size:10px;font-weight:700;color:#666;text-align:right;}
+
+  /* Hero: two-column */
+  .hero{
+    background:var(--teal-light);
+    padding:36px 24px;
   }
-  .logo-text .brand{
-    font-size:20px;
+  .hero-grid{
+    display:flex;
+    align-items:center;
+    gap:36px;
+    flex-wrap:wrap;
+  }
+  .hero-text{
+    flex:1 1 380px;
+  }
+  .hero-text h1{
+    font-size:22px;
     font-weight:800;
-    color:#1a1a1a;
-  }
-  .logo-text .tagline{
-    font-size:10px;
-    color:#2e7d32;
-    font-weight:600;
-    letter-spacing:.3px;
-  }
-  header .fine-print{
-    font-size:11px;
-    font-weight:700;
+    color:var(--teal);
     margin-bottom:6px;
   }
-  header h1{
-    font-size:16px;
-    font-weight:700;
-    margin-bottom:4px;
-  }
-  header .sub{
-    font-size:14px;
+  .hero-text .sub{
+    font-size:15px;
     font-weight:600;
+    color:#444;
+    margin-bottom:18px;
   }
-
-  /* Avatar */
-  .avatar-row{
+  .avatar-col{
+    flex:0 0 auto;
     display:flex;
     justify-content:center;
-    padding:16px 0 0;
-    background:var(--navy);
   }
   .avatar{
-    width:90px;
-    height:90px;
+    width:120px;
+    height:120px;
     border-radius:50%;
-    background:#cfd6e4;
-    border:4px solid #fff;
+    background:#fff;
+    border:5px solid var(--orange);
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    margin-top:16px;
   }
-  .avatar svg{width:60%;height:60%;color:#7c8aa5;}
+  .avatar svg{width:58%;height:58%;color:var(--teal);}
 
-  /* Hero / navy section */
-  .hero{
-    background:var(--navy);
+  /* Panel with condition copy + CTA */
+  .panel{
+    background:var(--teal);
     color:#fff;
-    padding:24px 24px 40px;
+    border-radius:10px;
+    padding:28px 26px;
+    margin-top:26px;
     text-align:center;
   }
-  .hero p{
-    max-width:720px;
-    margin:0 auto 20px;
-    font-size:17px;
+  .panel p{
+    max-width:760px;
+    margin:0 auto 18px;
+    font-size:16px;
     line-height:1.6;
     font-weight:600;
   }
-  .hero p.carriers{
-    font-size:15px;
+  .panel p.carriers{
+    font-size:14px;
     font-weight:600;
-    margin-bottom:26px;
+    margin-bottom:24px;
+    opacity:.92;
   }
   .cta-btn{
     display:inline-block;
-    background:var(--red);
+    background:var(--orange);
     color:#fff;
     text-decoration:none;
     font-weight:800;
     font-size:20px;
     padding:14px 34px;
-    border-radius:6px;
+    border-radius:30px;
     line-height:1.3;
     transition:background .15s ease;
   }
-  .cta-btn:hover{background:var(--red-dark);}
+  .cta-btn:hover{background:var(--orange-dark);}
   .cta-btn small{
     display:block;
     font-size:12px;
@@ -122,30 +127,51 @@
     margin-top:2px;
   }
 
-  /* How it works */
+  /* How it works: numbered cards */
   .how{
-    padding:40px 24px 30px;
+    padding:44px 24px 34px;
     text-align:center;
   }
   .how h2{
     font-size:24px;
     font-weight:800;
-    margin-bottom:30px;
+    color:var(--teal);
+    margin-bottom:32px;
   }
   .steps{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:36px;
+    gap:22px;
   }
   .step{
-    max-width:220px;
+    flex:1 1 220px;
+    max-width:260px;
+    background:var(--teal-light);
+    border-top:4px solid var(--orange);
+    border-radius:8px;
+    padding:24px 18px;
+    text-align:left;
+  }
+  .step .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:var(--orange);
+    color:#fff;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:12px;
   }
   .step svg{
-    width:48px;
-    height:48px;
-    color:var(--navy);
-    margin-bottom:14px;
+    width:36px;
+    height:36px;
+    color:var(--teal);
+    display:block;
+    margin-bottom:12px;
   }
   .step p{
     font-size:14px;
@@ -157,12 +183,15 @@
     text-align:center;
     padding:20px 24px 30px;
     font-size:10px;
-    color:#555;
+    color:#777;
+    border-top:1px solid #eee;
   }
 
-  @media (max-width:600px){
-    .hero p{font-size:15px;}
+  @media (max-width:640px){
+    .hero-grid{flex-direction:column-reverse;text-align:center;}
+    .panel p{font-size:15px;}
     .cta-btn{font-size:17px;padding:12px 24px;}
+    .step{text-align:center;}
   }
 </style>
 </head>
@@ -172,8 +201,8 @@
   <header>
     <div class="logo">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="9" y="2" width="6" height="20" rx="1.5" fill="#1b2a4e"/>
-        <rect x="2" y="9" width="20" height="6" rx="1.5" fill="#1b2a4e"/>
+        <rect x="9" y="2" width="6" height="20" rx="1.5" fill="currentColor"/>
+        <rect x="2" y="9" width="20" height="6" rx="1.5" fill="currentColor"/>
       </svg>
       <div class="logo-text">
         <div class="brand">MedAdvantage Insurance</div>
@@ -181,35 +210,42 @@
       </div>
     </div>
     <div class="fine-print">*Non-Government Entity</div>
-    <h1>Navigate Medicare Advantage Plans with Guidance</h1>
-    <div class="sub">{Have you lost coverage, moved, or turned 65?}</div>
   </header>
 
-  <div class="avatar-row">
-    <div class="avatar">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.5c-3.3 0-9.9 1.6-9.9 4.9V22h19.8v-2.6c0-3.3-6.6-4.9-9.9-4.9z"/></svg>
-    </div>
-  </div>
-
   <section class="hero">
-    <p>
-      If you have a chronic condition such as diabetes, heart failure, or cardiovascular
-      disorders, you may qualify for a Chronic Condition Special Needs Plan (C-SNP) Medicare
-      Advantage Plan with a [Healthy Food Allowance].
-    </p>
-    <p class="carriers">
-      Plans are offered by [UnitedHealthcare&reg;,][carrier 2,][carrier 3][and carrier 4]
-    </p>
-    <a class="cta-btn" href="tel:+18774470739">
-      877-447-0739
-      <small>TTY: 711</small>
-    </a>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Navigate Medicare Advantage Plans with Guidance</h1>
+        <div class="sub">{Have you lost coverage, moved, or turned 65?}</div>
+      </div>
+      <div class="avatar-col">
+        <div class="avatar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.5c-3.3 0-9.9 1.6-9.9 4.9V22h19.8v-2.6c0-3.3-6.6-4.9-9.9-4.9z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <p>
+        If you have a chronic condition such as diabetes, heart failure, or cardiovascular
+        disorders, you may qualify for a Chronic Condition Special Needs Plan (C-SNP) Medicare
+        Advantage Plan with a [Healthy Food Allowance].
+      </p>
+      <p class="carriers">
+        Plans are offered by [UnitedHealthcare&reg;,][carrier 2,][carrier 3][and carrier 4]
+      </p>
+      <a class="cta-btn" href="tel:+18774470739">
+        877-447-0739
+        <small>TTY: 711</small>
+      </a>
+    </div>
   </section>
 
   <section class="how">
     <h2>How It Works</h2>
     <div class="steps">
       <div class="step">
+        <span class="num">1</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <rect x="6" y="2" width="12" height="20" rx="2"/>
           <circle cx="9" cy="6" r="0.6" fill="currentColor" stroke="none"/>
@@ -226,12 +262,14 @@
         <p>Click the Button Above to Get Connected with a Licensed Insurance Agent.</p>
       </div>
       <div class="step">
+        <span class="num">2</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M4 5c0 8 7 15 15 15l2-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z"/>
         </svg>
         <p>Discuss Plan Options Easily Over the Phone.</p>
       </div>
       <div class="step">
+        <span class="num">3</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <circle cx="8" cy="9" r="3.5"/>
           <path d="M8 7.5v3M6.7 8h2.6"/>
